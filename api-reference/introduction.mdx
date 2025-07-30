@@ -1,33 +1,38 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: 'Start here to learn how to use the Inrconnect API'
 ---
 
 <Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
+  This API reference is auto-generated from the OpenAPI spec. You can explore each endpoint, view schemas, and try out live requests.
 </Note>
 
 ## Welcome
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+The Inrconnect API allows developers to programmatically interact with your organization data and more. This reference is powered by an OpenAPI specification and includes examples, parameter descriptions, and response formats.
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="Inrconnect OpenAPI Spec"
+  icon="book"
+  href="https://api.inrconnect.com/openapi.json"
 >
   View the OpenAPI specification file
 </Card>
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All endpoints require an API key to access. Include your key in the request header as shown below:
+
+```http
+GET /organization HTTP/1.1
+Host: api.inrconnect.com
+X-API-Key: YOUR_API_KEY_HERE
+```
 
 ```json
 "security": [
   {
-    "bearerAuth": []
+    "ApiKeyAuth": []
   }
 ]
 ```
